@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "3fc205cc-a225-4b9e-9ef6-8cb8186c9fc5",
+		"name": "Credit management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37660168"
+	},
+	"item": [
+		{
+			"name": "/api/credits/:user_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/credits/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credits",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/credits/:user_id/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\": 50\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/credits/1/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credits",
+						"1",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/credits/:user_id/deduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\": 20\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/credits/1/deduct",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credits",
+						"1",
+						"deduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/credits/:user_id/reset",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/credits/1/reset",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credits",
+						"1",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/schema/apply",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sql\": \"CREATE TABLE test_table (id INTEGER PRIMARY KEY, name TEXT);\", \n    \"token\": \"afeab6a0f83e5b86edfd56edbc495aedc4ec0afaa0590a37220cca09a64208d2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/schema/apply",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"schema",
+						"apply"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
